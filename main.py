@@ -1,7 +1,10 @@
-from assets.constants import Direction
+from constants import Direction, FPS
 from game import Game
 import pygame
 pygame.init()
+
+# Define clock
+clock = pygame.time.Clock()
 
 # Create game window
 logo = pygame.image.load("assets/logo.png")
@@ -51,3 +54,6 @@ while running:
             game.pressed[event.key] = True
         elif event.type == pygame.KEYUP:
             game.pressed[event.key] = False
+
+    # fix nb FPS
+    clock.tick(FPS)

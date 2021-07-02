@@ -1,4 +1,4 @@
-from assets.constants import Direction
+from constants import Direction
 import pygame
 
 
@@ -7,10 +7,11 @@ class Player(pygame.sprite.Sprite):
     def __init__(self, game):
         super().__init__()
         self.game = game
-        self.velocity = 1
+        self.velocity = 5
         self.nb_bomb = 1
         self.life = 1
         self.image = pygame.image.load('./assets/player.png')
+        self.image = pygame.transform.scale(self.image, (50, 50))
         self.rect = self.image.get_rect()
         self.rect.x = 200
         self.rect.y = 200

@@ -6,3 +6,6 @@ class Direction(Enum):
     RIGHT = "right"
     BOTTOM = "bottom"
     LEFT = "left"
+
+
+FPS = 60
